@@ -1,4 +1,4 @@
-# Candidate Engagement and Conversion (CECG): Workato Package
+# Candidate Connect Genie (CCE): Workato Genie
  
 A Workato package that automates candidate outreach, rejection, follow-up and reply classification for recruiting teams. Recruiters work through a Slack-based Genie, and the package handles Gmail delivery, follow-up scheduling and AI-powered reply classification in the background.
  
@@ -27,7 +27,7 @@ Recruiters spend significant time on repetitive candidate emails: sending outrea
 | --- | --- |
 | **Gmail** | Sends outreach, reject and follow-up emails, and detects candidate replies |
 | **OpenAI** | Classifies candidate replies (model used by the recipes: `gpt-5.6-luna`) |
-| **Slack** | Chat interface through which recruiters use the Candidate Engagement and Conversion Genie |
+| **Slack** | Chat interface through which recruiters use the Candidate Connect Genie Genie |
 | **Workato** | Hosts the recipes, Genie, data tables and connections |
  
 ---
@@ -54,7 +54,7 @@ Recruiter name and email are **optional** for both skills. Without them, only th
  
 ### Genie
  
-- **Candidate Engagement and Conversion Genie:** the Slack entry point for recruiters. It has both skill recipes registered and does not send an email unless a candidate name, email and role are provided.
+- **Candidate Connect Genie :** the Slack entry point for recruiters. It has both skill recipes registered and does not send an email unless a candidate name, email and role are provided.
  
 ### Data tables
  
@@ -71,9 +71,9 @@ Recruiter name and email are **optional** for both skills. Without them, only th
  
 | Field | Value |
 | --- | --- |
-| **Package name** | Candidate Engagement and Conversion (CECG) |
+| **Package name** | Candidate Connect Genie (CCE) |
 | **Deployment guide version** | 1.0 (2026) |
-| **Root project folder** | `Candidate Engagement and Conversion` |
+| **Root project folder** | `Candidate Connect Genie` |
  
 ### Included assets
  
@@ -81,7 +81,7 @@ Recruiter name and email are **optional** for both skills. Without them, only th
 | --- | --- | --- | --- |
 | Recipes | 2 | `[CECG] REC │ 001 │ Monitor Candidate Response with openai`<br>`[CECG] REC │ 002 │ Follow Up Candidate Email Trigger` | Reply classification and scheduled follow-ups |
 | Skill recipes | 2 | `[CECG] SKILL │ 001 │ Send out-reach email`<br>`[CECG] SKILL │ 002 │ Send Reject email` | Outreach and rejection emails triggered through the Genie |
-| Genie | 1 | Candidate Engagement and Conversion Genie | Conversational Slack interface for recruiters |
+| Genie | 1 | Candidate Connect Genie | Conversational Slack interface for recruiters |
 | Data tables | 2 | `candidate_outreach_and_follow_up_mail_details`<br>`openai_audit_log` | Candidate email tracking and OpenAI audit trail |
 | Connections | 3 | Gmail, OpenAI, Slack | External system access (re-authorized after import) |
  
@@ -91,7 +91,7 @@ The import should show **exactly** these assets.
  
 | Folder | Purpose |
 | --- | --- |
-| `Candidate Engagement and Conversion` | Root project folder |
+| `Candidate Connect Genie` | Root project folder |
 | `Recipes` | Trigger recipes |
 | `Skill Recipes` | Outreach and reject skills |
 | `Data tables` | Working data tables |
@@ -104,9 +104,9 @@ The import should show **exactly** these assets.
 ### 4.1 Import into Workato
  
 1. Log in to the customer's Workato workspace.
-2. Create a folder named **Candidate Engagement and Conversion** (it must not already exist, so the import has a clean destination).
+2. Create a folder named **Candidate Connect Genie** (it must not already exist, so the import has a clean destination).
 3. Go to **Tools → Recipe Lifecycle Management**.
-4. Select **Import Package**, choose the **Candidate Engagement and Conversion** folder as the destination, and upload the package zip.
+4. Select **Import Package**, choose the **Candidate Connect Genie** folder as the destination, and upload the package zip.
 5. Confirm the import finishes without errors and that the expected assets appear (2 recipes, 2 skill recipes, 1 Genie, 2 data tables, 3 connections).
  
 > Recipes are imported **inactive and unconfigured**.
@@ -127,7 +127,7 @@ The import should show **exactly** these assets.
 1. `[CECG] REC │ 002 │ Follow Up Candidate Email Trigger`: confirm the follow-up count updates after the nightly run.
 2. `[CECG] REC │ 001 │ Monitor Candidate Response with openai`: send a test reply and confirm it is classified and stored.
  
-**Step 3: Activate the Genie and register skills.** Open the Candidate Engagement and Conversion Genie and confirm both skills are registered and active. Test with a real recruiter prompt in Slack (for example, approving a test candidate).
+**Step 3: Activate the Genie and register skills.** Open the Candidate Connect Genie and confirm both skills are registered and active. Test with a real recruiter prompt in Slack (for example, approving a test candidate).
  
 **Step 4: Configure Slack.**
  
