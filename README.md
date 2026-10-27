@@ -1,4 +1,4 @@
-# Candidate Connect Genie (CCE): Workato Genie
+# Candidate Connect Genie : Workato Genie
  
 A Workato package that automates candidate outreach, rejection, follow-up and reply classification for recruiting teams. Recruiters work through a Slack-based Genie, and the package handles Gmail delivery, follow-up scheduling and AI-powered reply classification in the background.
  
